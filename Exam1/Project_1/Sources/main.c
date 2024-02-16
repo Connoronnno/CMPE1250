@@ -15,7 +15,7 @@
 /********************************************************************/
 #include <hidef.h>      /* common defines and macros */
 #include "derivative.h" /* derivative-specific definitions */
-#include "../../lib/SWLED.h" /*used functions and enums for my led switching and button checking 
+#include "../../lib/SWLED.h" /*used functions and enums for my led switching and button checking */
 //Other system includes or your includes go here
 //#include <stdlib.h>
 //#include <stdio.h>
