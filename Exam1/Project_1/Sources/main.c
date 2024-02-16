@@ -89,12 +89,12 @@ void main(void)
     
     //switches between yellow and green if total buttons pushed is 2
     if(buttonCount==2){
-      SWL_ON(0b00100000);
-      SWL_OFF(0b01000000); 
+      SWL_ON(0b00100000); //green LED on
+      SWL_OFF(0b01000000); //yellow LED off
     } 
     else{
-      SWL_OFF(0b00100000);
-      SWL_ON(0b01000000);
+      SWL_OFF(0b00100000); //green LED off
+      SWL_ON(0b01000000); //yellow LED on
     }
 	}
 }
