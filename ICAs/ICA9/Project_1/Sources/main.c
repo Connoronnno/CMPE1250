@@ -1,8 +1,8 @@
 /********************************************************************/
-// HC12 Program:  YourProg - MiniExplanation
+// HC12 Program:  ICA09
 // Processor:     MC9S12XDP512
-// Bus Speed:     MHz
-// Author:        This B. You
+// Bus Speed:     20 MHz
+// Author:        Connor Marsh
 // Details:       A more detailed explanation of the program is entered here               
 // Date:          Date Created
 // Revision History :
@@ -66,7 +66,7 @@ void main(void)
   // one-time initializations
 /********************************************************************/
 SWL_Init();
-sci0_InitMath(20000000, 9600);
+sci0_InitMath(20000000, 19200);
 RTI_Init();
 Clock_Set20MHZ();
 nums = 0;
