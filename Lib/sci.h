@@ -61,6 +61,8 @@ unsigned long sci0_InitMath(unsigned long ulBusClock, unsigned long ulBaudRate);
 // waits for a byte to arrive and returns it
 unsigned char sci0_bread(void);
 
+void sci0_ClearScreen(void);
+void sci0_GotoXY(unsigned int x, unsigned int y);
 unsigned char sci0_read(unsigned char * pData);
 
 // read a byte, non-blocking

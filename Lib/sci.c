@@ -24,6 +24,26 @@ void sci0_txByte (unsigned char data){
     SCI0DRL = data;
 }
 
+void sci0_ClearScreen(void){
+    sci0_txStr("\033[2J");
+}
+void sci0_GotoXY(unsigned int x, unsigned int y){
+    unsigned char escape[15];
+    sprintf(escape, "\033[%d;%dH", y, x);
+    sci0_txStr(escape);
+}
+/*unsigned long sci0_InitMath(unsigned long ulBusClock, unsigned long ulBaudRate){
+
+    unsigned long ddivisor = ulBusClock/(16*ulBaudRate);
+    unsigned long divisor = ddivisor*(ulBusClock/16);
+    divisor /=(ulBaudRate);
+    divisor = (divisor+(ddivisor/2))/ddivisor;
+    SCI0CR2 = 0;
+    SCI0BD = divisor;
+    SCI0CR2_RE = 1;
+    SCI0CR2_TE = 1;
+    return divisor;
+}*/
 unsigned long sci0_InitMath(unsigned long ulBusClock, unsigned long ulBaudRate){
 
     unsigned long divisor = ulBusClock/(16*ulBaudRate);
