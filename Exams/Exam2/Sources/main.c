@@ -76,15 +76,17 @@ Clock_Set20MHZ();
   for (;;)
   {
   nnum=num;
-  while((nnum%10)>=10){
+  while((nnum/10)>=10){
   zeros++;
   nnum = nnum/10;
   }
+  zeros=3-zeros;
   sci0_txStr("\x1b[0;0H");
   sci0_txStr(strc);
-  for(ii=0; ii<=zeros; ii++){
+  for(ii=0; ii<zeros; ii++){
   sci0_txByte('0');
   }
+  zeros=0;
   sprintf(str, "%d",num);
   sci0_txStr(str);
   RTI_Delay_ms(10);
