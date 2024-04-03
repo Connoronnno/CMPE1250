@@ -12,7 +12,6 @@ void RTI_Init(void){
 void RTI_Delay_ms(unsigned int ms){
     
     CRGINT &= 0b01111111;
-    RTI_Init(); 
     
     for(; ms>0; ms--){
         while(!CRGFLG_RTIF){

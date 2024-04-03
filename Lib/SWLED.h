@@ -56,7 +56,7 @@ void SWL_TOG (SWL_LEDColour led);
 // switch functions
 
 // is a specific switch being pushed (T/F)
-unsigned int SWL_Pushed (void);
+unsigned int SWL_PUSHED(SWL_SwitchPos pos);
 
 // is any switch being pushed (T/F)
 int SWL_Any (void);
