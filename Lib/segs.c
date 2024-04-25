@@ -78,3 +78,20 @@ Segs_Normal(6, (Value>>4)&0b0000000000001111, Segs_DP_OFF);
 Segs_Normal(7, Value&0b0000000000001111, Segs_DP_OFF);  
 }
 }
+void Segs_16D(unsigned int Value, Segs_LineOption so){   
+if(so){
+Segs_Normal(0, (Value/1000)&0b0000000000001111, Segs_DP_OFF);
+Value %=1000;
+Segs_Normal(1, (Value/100)&0b0000000000001111, Segs_DP_OFF);
+Value %=100;
+Segs_Normal(2, (Value/10)&0b0000000000001111, Segs_DP_OFF);
+Value %=10;
+Segs_Normal(3, (Value)&0b0000000000001111, Segs_DP_OFF);
+} 
+else{
+Segs_Normal(4, (Value/1000)&0b0000000000001111, Segs_DP_OFF);
+Segs_Normal(5, (Value/100)&0b0000000000001111, Segs_DP_OFF);
+Segs_Normal(6, (Value/10)&0b0000000000001111, Segs_DP_OFF);
+Segs_Normal(7, (Value)&0b0000000000001111, Segs_DP_OFF);
+}
+}
