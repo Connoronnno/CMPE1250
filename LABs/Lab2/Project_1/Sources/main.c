@@ -95,12 +95,13 @@ void main(void)
    }
    if(i%4==0){
       for(ii=0; ii<((i+4)/4);ii++){
-        Segs_Custom(4+ii, 0b00000000); 
         if(ii>3){
         Segs_Custom(4, 0b10000000);
         Segs_Custom(5, 0b10000000);
         Segs_Custom(6, 0b10000000);
         Segs_Custom(7, 0b10000000);
+        } else{
+          Segs_Custom(4+ii, 0b00000000);
         }
       }
    }
