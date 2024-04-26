@@ -1,5 +1,7 @@
 #include "../../../lib/SWLED.h"
 #include "derivative.h"
+#include "rti.h"
+
 
 void SWL_Init(){
     PT1AD1 = 0b00000000;
@@ -25,4 +27,3 @@ unsigned int SWL_PUSHED(SWL_SwitchPos pos){
 int SWL_ANY(){
     return PT1AD1&0b00011111>0;
     }
-
